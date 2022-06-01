@@ -1,0 +1,38 @@
+package com.lucky.practice;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class BinarySearchSortedRotatedArray {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(2,32,55,63,68,77,81,-5,-2,0));
+		System.out.println(binarySearch(arr,-2));//8
+	}
+
+	public static int binarySearch(ArrayList<Integer> arr, int num) {
+		// TODO Auto-generated method stub
+		int low = 0; int high = arr.size()-1;
+		while (low<=high) {
+			int mid = (low+high)/2;
+			if(arr.get(mid)==num) return mid;
+			//Left side sorted
+			if(arr.get(mid)>arr.get(low)) {
+				//check if num lies in the range
+				if(num<arr.get(mid) && num>=arr.get(low)) {
+					high = mid-1;
+				}
+				else low = mid + 1;
+			}
+			//Right side sorted
+			else {
+				if(num>arr.get(mid) && num<=arr.get(high)) {
+					low = mid + 1;
+				}
+				else high= mid -1;
+			}
+		}
+		return -1;
+	}
+
+}

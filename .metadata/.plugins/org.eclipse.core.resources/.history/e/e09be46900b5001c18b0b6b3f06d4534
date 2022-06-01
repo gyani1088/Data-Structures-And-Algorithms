@@ -1,0 +1,25 @@
+package com.lucky.practice;
+
+public class GreatestCommonDivisor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(calculateGCD(6, 30));
+	}
+	
+	public static int calculateGCD(int a,int b) {
+		if(a==b) return a;
+		else if(a>b) {
+			a = a+b;
+			b = a-b;
+			a = a-b;
+		}
+		while(a!=0) {
+			int temp=b%a;
+			b=a;
+			a=temp;
+		}
+		return b;
+	}
+
+}

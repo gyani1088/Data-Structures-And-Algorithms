@@ -1,0 +1,12 @@
+package com.lucky.practice;
+
+public class EvenOddSubarray {
+	/**
+	 * To find the maximum of even - odd subarray
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

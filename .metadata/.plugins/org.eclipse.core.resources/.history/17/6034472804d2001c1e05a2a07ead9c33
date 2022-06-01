@@ -1,0 +1,38 @@
+package com.lucky.practice;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class SelectionSort {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(10,32,22,4,55,63,68,100,11,77,81,2));
+		//arr = new ArrayList<Integer>(Arrays.asList(32,22,11));
+		selectionSort(arr);
+		System.out.println(arr);
+
+	}
+	/**
+	 * Time Complexity: Theta(n)
+	 */
+	public static void selectionSort(ArrayList<Integer> arr) {
+		for(int i =arr.size()-1;i>0;i--) {
+			int max = arr.get(0);
+			int maxIndex = 0;
+			for(int j = 1;j<=i;j++) {
+				if(max<arr.get(j)) {
+					max=arr.get(j);
+					maxIndex = j;
+				}
+			}
+			if (i!=maxIndex)
+			{
+			int temp = arr.get(i);
+			arr.set(i,arr.get(maxIndex));
+			arr.set(maxIndex,temp);
+			}
+		}
+		
+	}
+
+}

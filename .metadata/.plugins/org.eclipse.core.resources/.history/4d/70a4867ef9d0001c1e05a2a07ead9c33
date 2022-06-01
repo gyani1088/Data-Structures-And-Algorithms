@@ -1,0 +1,16 @@
+package com.lucky.practice;
+
+import java.util.Arrays;
+
+public class ArraysSortingBasics {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {10,40,23,42,15,77,73};
+		Arrays.sort(arr);
+		System.out.println(Arrays.toString(arr));
+		arr = new int[]{15,22,21,13,24};
+		Arrays.sort(arr,2,5);
+		System.out.println(Arrays.toString(arr));
+	}
+}

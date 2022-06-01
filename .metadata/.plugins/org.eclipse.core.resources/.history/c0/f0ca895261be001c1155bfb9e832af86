@@ -1,0 +1,24 @@
+package com.lucky.practice;
+
+public class CountSetBits {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(countSetBits(5));
+		System.out.println(countSetBits(8));
+		System.out.println(countSetBits(7));
+
+	}
+	
+	public static int countSetBits(int number) {
+		int bits =0;
+		while(number!=0) {
+			//if((number&1)==1) bits++;
+			//OR
+			bits+=(number&1);
+			number=number>>1;
+		}
+		return bits;
+	}
+
+}

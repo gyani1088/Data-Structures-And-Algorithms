@@ -1,0 +1,11 @@
+package com.lucky.practice;
+
+public class BitwiseAnd {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a =3,b=6;
+		System.out.println(a & b);//(32-bit) 00...011 & 00...110 = 00...010 = int 2
+	}
+
+}

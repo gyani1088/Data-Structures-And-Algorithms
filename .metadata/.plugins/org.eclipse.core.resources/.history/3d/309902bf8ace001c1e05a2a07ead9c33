@@ -1,0 +1,25 @@
+package com.lucky.practice;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class FirstOccurrenceInSorted {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(2,32,55,55,55,55,55,63,68,77,81));
+		System.out.println(firstOccurrenceRecursive(arr,55,0,arr.size()-1));//2
+	}
+
+	public static int firstOccurrenceRecursive(ArrayList<Integer> arr, int num, int low, int high) {
+		int mid = (low+high)/2;
+		if(arr.get(mid)==num) {
+			if(mid==0) return 0;
+			else if(arr.get(mid)==arr.get(mid-1)) return firstOccurrenceRecursive(arr, num, low, mid-1);
+			else return mid;
+		}
+		else if(num>arr.get(mid)) low=mid+1;
+		else high = mid-1;
+		return 0;
+	}
+
+}

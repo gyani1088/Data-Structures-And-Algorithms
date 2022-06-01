@@ -1,0 +1,18 @@
+package com.lucky.practice;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class FirstOccurrenceInSorted {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(2,32,55,63,68,77,81));
+		System.out.println(firstOccurrence(arr,15,0,arr.size()-1));
+	}
+
+	public static int firstOccurrenceRecursive(ArrayList<Integer> arr, int num, int low, int high) {
+		
+		return 0;
+	}
+
+}

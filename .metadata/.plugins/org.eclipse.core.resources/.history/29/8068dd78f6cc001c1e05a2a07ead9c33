@@ -1,0 +1,43 @@
+package com.lucky.practice;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class MinimumConsecutiveFlips {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/**
+		 * Given a binary array, we need to find how many minimum flips that it need
+		 * to take to print an array of all times. A flip can consist of all consecutive
+		 * 0s or 1s.
+		 */
+		ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(1,0,0,1,1,0,0,1,1,0));
+		minimumConsecutiveFlips(arr);
+	}
+
+	public static void minimumConsecutiveFlips(ArrayList<Integer> arr) {
+		// TODO Auto-generated method stub
+		int first = arr.get(0);
+		int count = 0;
+		boolean flip = false;
+		for(int i=1;i<arr.size();i++) {
+			if (arr.get(i)!=arr.get(i-1)) {
+				if (!flip) {
+					flip = true;
+					System.out.print("From "+i);
+				}
+				else 
+				{
+					flip=false;
+					System.out.print(" to "+(i-1));
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	
+}

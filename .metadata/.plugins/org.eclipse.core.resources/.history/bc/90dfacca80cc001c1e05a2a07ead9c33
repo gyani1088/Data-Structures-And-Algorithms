@@ -1,0 +1,38 @@
+package com.lucky.practice;
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class MaxCircularSubarraySum {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(10,-2,5,2));//17
+		System.out.println(maxSumEfficient(arr));
+	}
+	/**
+	 * Kadane's algorithm
+	 * @param arr
+	 * @return
+	 */
+	private static int maxSumEfficient(ArrayList<Integer> arr) {
+		// TODO Auto-generated method stub
+		//int maxSumLeftIndex = 0;
+		int maxSum = arr.get(0);
+		int minSum = arr.get(0);
+		int sum = arr.get(0);
+		int currMax = arr.get(0);
+		int currMin = arr.get(0);
+		int n = arr.size();
+		for(int i = 1; i<n;i++) {
+			sum += arr.get(i);
+			currMin = Math.min(arr.get(i), currMin+arr.get(i));
+			minSum = Math.min(currMin, minSum);
+			currMax = Math.max(currMax+arr.get(i), arr.get(i));
+			maxSum = Math.max(maxSum, currMax);
+		}
+		maxSum = Math.max(sum-minSum, maxSum);
+		return maxSum;
+	}
+
+}

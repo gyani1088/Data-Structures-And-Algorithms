@@ -1,0 +1,11 @@
+Sorted arrays/lists are best used with binary search algorithms. Time complexity O(log n)
+Thumb rule : Sorted array -- use binary search
+
+Infinite sorted array : multiply index by 2 till you find an appropriate window of i/2+1, i
+
+BinarySearchSortedRotatedArray: at least one half of the array will always be sorted
+	(corner case: when both halves are sorted)
+ we check the sortedness of each half
+ 	then: we check if the number lies between the two end elements
+ 	 if true: divide and conquer the half
+ 	 else choose the other(which may/may not be unsorted) half

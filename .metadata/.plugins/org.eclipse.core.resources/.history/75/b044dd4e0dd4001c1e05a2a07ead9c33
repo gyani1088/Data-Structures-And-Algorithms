@@ -1,0 +1,40 @@
+package com.lucky.practice;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Partition {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(44,6,18,12,14,11,16,12,14,14,13));
+		System.out.println(partitionNaive(arr,0,arr.size()-1,arr.size()-3));
+	}
+	
+	/**
+	 * @return last occurrence of the pivot element after partitioning
+	 * such that all <= numbers come on LHS of the pivot and
+	 * all > numbers come on RHS of the pivot
+	 */
+	public static int partitionNaive(ArrayList<Integer> arr, int l, int r, int pivot) {
+		System.out.println("pivot element="+arr.get(pivot));
+		ArrayList<Integer> temp = new ArrayList<Integer>(r-l+1);
+		for(int i=0;i<arr.size();i++) {
+			if(arr.get(i)<arr.get(pivot)) temp.add(arr.get(i));
+		}
+		for(int i=0;i<arr.size();i++) {
+			if(arr.get(i)==arr.get(pivot)) temp.add(arr.get(i));
+		}
+		int res = temp.size()-1; // last index of the pivot element
+		for(int i=0;i<arr.size();i++) {
+			if(arr.get(i)>arr.get(pivot)) temp.add(arr.get(i));
+		}
+		arr = new ArrayList<>(temp);
+		System.out.println("l="+l+",r="+r+",pivot="+pivot+",arr="+arr+",res="+res);
+		return res;
+	}
+
+
+	
+
+}

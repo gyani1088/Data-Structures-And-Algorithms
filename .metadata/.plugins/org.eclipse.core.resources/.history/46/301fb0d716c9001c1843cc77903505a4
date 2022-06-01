@@ -1,0 +1,30 @@
+package com.lucky.practice;
+
+public class PermutationsOfAString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		permute("ABC", 0);
+	}
+	
+	public static void permute(String str, int i) {
+		if(i==str.length()-1) {
+			System.out.println(str);
+			return;
+		}
+		for(int j = i;j<str.length();j++) {
+			swap(str,i,j);
+			permute(str,i+1);
+			swap(str,i,j);
+		}
+	}
+
+	public static void swap(String str, int i, int j) {
+		// TODO Auto-generated method stub
+		char temp = str.charAt(i);
+		str = str.replace(str.charAt(i), str.charAt(j));
+		str = str.replace(str.charAt(j), temp);
+	}
+
+
+}
