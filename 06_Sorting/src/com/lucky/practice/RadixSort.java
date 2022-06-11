@@ -11,9 +11,15 @@ public class RadixSort {
 		System.out.println(arr);
 		radixSort(arr);
 		System.out.println(arr);
+		
 	}
 	/**
 	 * Uses countingSort as subroutine
+	 * Overall time complexity = Theta(d*(n+10))
+	 * where d-> length of the max number
+	 * and n-> no. of elements in the array
+	 * 
+	 * Aux Space = Theta(n+10) or n+b where b = base used
 	 */
 	public static void radixSort(ArrayList<Integer> arr) {
 		//find the maximum number and thus it's length

@@ -16,6 +16,8 @@ QuickSort
 CycleSort -> O(n2) does minimum writes (used where writes are costly e.g EEPROM)
 Heap sort(TODO)
 Counting sort(used as a subroutine in Radix sort)
+Radix Sort
+Bucket Sort
 
 Average time complexity (Hoare's partition) : Random pivot and averaging over it O(nlogn)
 
