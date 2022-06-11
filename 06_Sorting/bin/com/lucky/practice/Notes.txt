@@ -2,8 +2,10 @@ Stable sorting algos - bubble sort, merge sort, insertion sort
 Unstable sorting algos - selection sort, quick sort, heap sort
 
 Bubble Sort
-Selection Sort
-Insertion sort
+Selection Sort - select the max of the array and swap it with the last element
+Insertion sort - select the current element at the nth position and insert it in the correct
+				position in the n-1 element sorted array before it to make it n elements sorted
+				array
 Merge function and Merge sort
 Partition Function ***
 	a) Naive (Stable)
@@ -11,9 +13,13 @@ Partition Function ***
 	b) Hoare's partitioning (No pivot is fixed, 2 partitions 
 	are created which are recursed further) ** (faster than lomuto and unstable)
 QuickSort
-CycleSort
+CycleSort -> O(n2) does minimum writes (used where writes are costly e.g EEPROM)
+Heap sort(TODO)
+Counting sort(used as a subroutine in Radix sort)
 
 Average time complexity (Hoare's partition) : Random pivot and averaging over it O(nlogn)
 
 3 type partitioning
 **Dutch National Flag Algorithm
+
+TODO: Heap Sort (After studying heap) --- Similar to Selection Sort
