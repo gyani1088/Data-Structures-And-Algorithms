@@ -1,0 +1,6 @@
+1. Snake pattern
+2. Perimeter(Boundary) Traversal
+3. Transpose
+4. Anticlockwise 90 deg rotation(square matrix) = 1. transpose -> 2. flip along x-axis
+5. Spiral traversal (top,right,bottom,left variables (keep one of them changing 
+after one linear traversal))
