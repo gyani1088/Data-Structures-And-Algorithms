@@ -1,0 +1,3 @@
+
+For BFS we use queues to store the children of the current node form left to right
+For Spiral BFS we use 2 stacks one for L->R other for R->L.
