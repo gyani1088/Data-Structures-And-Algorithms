@@ -1,0 +1,14 @@
+Build heap: Given a random array, convert it into a minHeap
+Heapify: when one element is added, make sure the heap is rearranged into a minHeap after every addition,
+        starts with bottom most right most element, i.e from index of size-1 and places it the the
+        respective location by swapping with its parent (downward flow of the max element in minHeapify)
+Extract: to bring the smallest element to the root (arr[0])
+Update key: to decrease a certain value in the heap.arr and then adding the and then moving it to the correct position
+            so that it doesn't invalidate the properties of a min heap.
+Delete key: to decrease the value of the index to -infinity. extract it to the root, swapping with the last element,
+            and then moving the root down tho the correct place so as to validate the properties of a min heap.
+Build heap: to rearrange a random array to a heap from the rightmost inner most parent.
+
+Median of a stream: POPULAR INTERVEIW QUESTION
+
+Heap is cache-friendly
