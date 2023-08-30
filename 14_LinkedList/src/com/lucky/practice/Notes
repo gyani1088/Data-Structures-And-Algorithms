@@ -1,0 +1,8 @@
+Inserting/Deleting a head or head.next in a circular linked list is O(1) operation
+
+Detect loop in Linked lists:
+    1. Add a visited (boolean) object for each node and as soon as we find a previously visited node as next node
+        of the current node, then we can say there's a loop ..... Time complexity:O(n) but there's a modification
+        in the Node object.
+    2. We store the next pointer of every node to a dummy temp node. When a loop is present the next pointer of an
+        existing element would already be pointing to the dummy temp node.
