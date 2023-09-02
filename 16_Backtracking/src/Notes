@@ -1,0 +1,6 @@
+Printing a 2D array maze of size NxN using streams
+--------------------------------------------------
+System.out.println(IntStream.range(0,maze.length).mapToObj(
+                rowNum -> IntStream.range(0,maze.length).mapToObj(i-> {
+                    return maze[rowNum][i]?1+"":0+"";
+                }).collect(Collectors.joining(","))).collect(Collectors.joining("\n")));
