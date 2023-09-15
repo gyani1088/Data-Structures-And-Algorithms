@@ -1,0 +1,5 @@
+For fixed sized arrays
+Dealing with multiple no of queries of two types
+1. Range query
+2. Update query
+Segment tree is generally represented as an array of Theta(n) auxiliary space
