@@ -1,0 +1,18 @@
+Linked list implementation of Stack give worst time complexity of O(1) for all operations.
+
+Applications of stack:
+1. Function calls
+2. Balanced parentheses problem: [(a+b)*{d-(c+e)}]
+3. Reversing items
+4. Infix to prefix/postfix
+5. Evaluation of prefix/postfix
+6. Stock span problem and its variants
+7. Undo/Redo or backward/forward
+
+Java collections gives 2 implementations of stack:
+1. Stack (Thread safe)
+2. ArrayDeque (Thread unsafe OR Single threaded use)
+
+Similar problems:
+1. Stock span 2.PreviousGreaterElement
+1. Largest Area Of Rectangle in a histogram  2.Largest area in a matrix containing all 1s
