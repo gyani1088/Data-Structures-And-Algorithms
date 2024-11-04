@@ -2,6 +2,7 @@ package com.lucky.heap;
 
 /**
  * Partially Heapified Tree:
+ *
  * Only the subtree rooted at the node to be heapified may violate the heap property;
  * the rest of the tree should already satisfy the heap property.
  * */
