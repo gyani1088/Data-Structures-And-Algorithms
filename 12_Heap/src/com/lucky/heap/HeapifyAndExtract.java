@@ -1,8 +1,14 @@
 package com.lucky.heap;
 
+/**
+ * Partially Heapified Tree:
+ * Only the subtree rooted at the node to be heapified may violate the heap property;
+ * the rest of the tree should already satisfy the heap property.
+ * */
 public class HeapifyAndExtract {
     public static void main(String[] args) {
         int array[] ={80,20,15,40,50,100,25,45};
+//        array = new int[]{100, 50, 80, 15, 25, 20, 40};
         MinHeap minHeap = new MinHeap(10);
         minHeap.size=array.length;
         for(int i=0;i<minHeap.size;i++){
